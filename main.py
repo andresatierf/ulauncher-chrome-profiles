@@ -62,8 +62,22 @@ class KeywordQueryEventListener(EventListener):
                 on_enter=ExtensionCustomAction({
                     'chrome_cmd': extension.preferences['chrome_cmd'],
                     'opt': ['--profile-directory={0}'.format(folder)]
-                }, keep_app_open=True)
+                }, keep_app_open=False)
             ))
+        entries.append(
+            ExtensionResultItem(
+                icon="images/icon.png",
+                name="Incognito",
+                description="Launch browser in incognito mode",
+                on_enter=ExtensionCustomAction(
+                    {
+                        "chrome_cmd": extension.preferences["chrome_cmd"],
+                        "opt": ["--incognito"],
+                    },
+                    keep_app_open=False,
+                ),
+            )
+        )
         return RenderResultListAction(entries)
 
 
