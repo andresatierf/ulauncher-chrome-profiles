@@ -11,7 +11,7 @@
     {
       "id": "keyword",
       "type": "keyword",
-      "name": "Chrome Profile",
+      "name": "Main keyword",
       "description": "Keyword to invoke this extension",
       "default_value": "cp"
     },
